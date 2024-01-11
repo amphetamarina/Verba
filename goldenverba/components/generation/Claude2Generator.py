@@ -80,7 +80,7 @@ class Claude2Generator(Generator):
     def prepare_messages(
         self, queries: list[str], context: list[str], conversation: dict[str, str]
     ) -> str:
-        messages = "You are a Retrieval Augmented Generation chatbot. Please answer user queries only with the provided context. If the provided documentation does not provide enough information, say so. Always answer in Brazilian Portuguese, but never translate English terms from documents."
+        messages = "You are a Retrieval Augmented Generation chatbot. Please answer user queries only with the provided context. If the provided documentation does not provide enough information, say so."
 
         for message in conversation:
             messages += "\n\n" + message.type + ": " + message.content
